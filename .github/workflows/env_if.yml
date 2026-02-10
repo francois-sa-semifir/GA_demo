@@ -1,8 +1,8 @@
-name: Hello $NAME
+name: Hello François
 on: workflow_dispatch
 
 env:
-  NAME: François
+  NAME: Alex
 
 jobs:
   say_hello:
@@ -13,7 +13,7 @@ jobs:
         if: ${{env.NAME != 'François'}}
         run: echo "Salut mais qui es tu ?, tu n'es pas $NAME ?! Oo!"
       
-      - name: "Hello $NAME"
+      - name: "Hello François (steps)"
 
         if: ${{env.NAME == 'François'}}
         run: echo "Salut $NAME ! Force et Honneur !!!"
