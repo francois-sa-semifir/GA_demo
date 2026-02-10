@@ -13,11 +13,11 @@ jobs:
       ENTERPRISE: semifir
     steps:
       - name: "Dit bonjour"
-        run: echo "Salut $NAME !  TU travailles chez $ENTERPRISE ? Alors bon $DAY à toi !"
+        run: echo "Salut $NAME !  Tu travailles chez $ENTERPRISE ? Alors bon $DAY à toi !"
         env:
           DAY: mardi
       - name: "Mardi ?"
-        run: echo "QUel jour sommes nous ? $DAY ?"
+        run: echo "Quel jour sommes nous ? $DAY ?"
   say_goodbye:
     runs-on: ubuntu-latest
     steps:
