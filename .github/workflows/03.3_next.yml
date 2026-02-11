@@ -1,0 +1,13 @@
+name: workflow suivant
+
+on:
+  workflow_run:
+    workflows: [Merge PR]
+    types: completed
+
+jobs:
+  workflow_next:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Validation du WF suivant"
+        run: echo "workflow terminé"
