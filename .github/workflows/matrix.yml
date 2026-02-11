@@ -6,6 +6,7 @@ jobs:
   Fruits_et_noms:
     runs-on: unbuntu-latest
     strategy:
+      max-parallel: 2
       fail-fast: true
       matrix:
         fruits: [pomme, banane, fraise, pêche]
@@ -13,4 +14,4 @@ jobs:
     name: fruits/noms
     steps:
       - name: Manger
-        run: echo "${{matrix.noms}} mange une ${{matrix.fruits}}, et il/elle adore ça ! "
+        run: echo "${{matrix.noms}} mange une ${{matrix.fruits}}, et il/elle adore ça !"
