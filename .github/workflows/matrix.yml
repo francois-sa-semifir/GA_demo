@@ -1,17 +1,18 @@
-name: Matrix Fruit
+name: fruits
 
 on: workflow_dispatch
 
 jobs:
-  Fruits_et_noms:
-    runs-on: unbuntu-latest
+  Fruits:
     strategy:
-      max-parallel: 2
       fail-fast: true
+      max-parallel : 2
       matrix:
-        fruits: [pomme, banane, fraise, pêche]
-        noms: [Geralt, Ashen One, Tarnished, Link]
-    name: fruits/noms
+        fruits: [Pomme, Poire, Pêche, Cerise]
+        personnes: [Geralt, Ashen One, Tarnished, Link]
+    name: fruits/personnes
+    runs-on: ubuntu-latest
+
     steps:
       - name: Manger
-        run: echo "${{matrix.noms}} mange une ${{matrix.fruits}}, et il/elle adore ça !"
+        run : echo "${{matrix.personnes}} mange une ${{matrix.fruits}}, et il/elle adore ça !"
